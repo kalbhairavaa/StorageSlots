@@ -5,6 +5,10 @@
 // Runtime Environment's members available in the global scope.
 const hre = require('hardhat')
 // const { ethers } = require("hardhat");
+// console.log(process.env)
+const { API_URL, PRIVATE_KEY } = process.env
+console.log(API_URL)
+console.log(PRIVATE_KEY)
 
 async function main() {
   // Hardhat always runs the compile task when running scripts with its command

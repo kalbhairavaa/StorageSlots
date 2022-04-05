@@ -1,0 +1,421 @@
+    /* "contracts/NotAbstractProxy.sol":24:1453  contract NotAbstractProxy {... */
+  mstore(0x40, 0x80)
+  callvalue
+  dup1
+  iszero
+  tag_1
+  jumpi
+  0x00
+  dup1
+  revert
+tag_1:
+  pop
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x00
+  codecopy
+  0x00
+  return
+stop
+
+sub_0: assembly {
+        /* "contracts/NotAbstractProxy.sol":24:1453  contract NotAbstractProxy {... */
+      mstore(0x40, 0x80)
+      jumpi(tag_1, lt(calldatasize, 0x04))
+      shr(0xe0, calldataload(0x00))
+      dup1
+      0x5c60da1b
+      eq
+      tag_3
+      jumpi
+      dup1
+      0xd784d426
+      eq
+      tag_4
+      jumpi
+      jump(tag_2)
+    tag_1:
+    tag_2:
+        /* "contracts/NotAbstractProxy.sol":1419:1444  _delegate(implementation) */
+      tag_7
+        /* "contracts/NotAbstractProxy.sol":1429:1443  implementation */
+      0x00
+      dup1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "contracts/NotAbstractProxy.sol":1419:1428  _delegate */
+      tag_8
+        /* "contracts/NotAbstractProxy.sol":1419:1444  _delegate(implementation) */
+      jump	// in
+    tag_7:
+        /* "contracts/NotAbstractProxy.sol":24:1453  contract NotAbstractProxy {... */
+      stop
+        /* "contracts/NotAbstractProxy.sol":56:85  address public implementation */
+    tag_3:
+      callvalue
+      dup1
+      iszero
+      tag_9
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_9:
+      pop
+      tag_10
+      tag_11
+      jump	// in
+    tag_10:
+      mload(0x40)
+      tag_12
+      swap2
+      swap1
+      tag_13
+      jump	// in
+    tag_12:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "contracts/NotAbstractProxy.sol":92:180  function setImplementation(address _imp) external {... */
+    tag_4:
+      callvalue
+      dup1
+      iszero
+      tag_14
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_14:
+      pop
+      tag_15
+      0x04
+      dup1
+      calldatasize
+      sub
+      dup2
+      add
+      swap1
+      tag_16
+      swap2
+      swap1
+      tag_17
+      jump	// in
+    tag_16:
+      tag_18
+      jump	// in
+    tag_15:
+      stop
+        /* "contracts/NotAbstractProxy.sol":186:1375  function _delegate(address _imp) internal virtual {... */
+    tag_8:
+        /* "contracts/NotAbstractProxy.sol":402:416  calldatasize() */
+      calldatasize
+        /* "contracts/NotAbstractProxy.sol":399:400  0 */
+      0x00
+        /* "contracts/NotAbstractProxy.sol":396:397  0 */
+      dup1
+        /* "contracts/NotAbstractProxy.sol":383:417  calldatacopy(0, 0, calldatasize()) */
+      calldatacopy
+        /* "contracts/NotAbstractProxy.sol":793:794  0 */
+      0x00
+        /* "contracts/NotAbstractProxy.sol":790:791  0 */
+      dup1
+        /* "contracts/NotAbstractProxy.sol":774:788  calldatasize() */
+      calldatasize
+        /* "contracts/NotAbstractProxy.sol":771:772  0 */
+      0x00
+        /* "contracts/NotAbstractProxy.sol":765:769  _imp */
+      dup5
+        /* "contracts/NotAbstractProxy.sol":758:763  gas() */
+      gas
+        /* "contracts/NotAbstractProxy.sol":745:795  delegatecall(gas(), _imp, 0, calldatasize(), 0, 0) */
+      delegatecall
+        /* "contracts/NotAbstractProxy.sol":948:964  returndatasize() */
+      returndatasize
+        /* "contracts/NotAbstractProxy.sol":945:946  0 */
+      0x00
+        /* "contracts/NotAbstractProxy.sol":942:943  0 */
+      dup1
+        /* "contracts/NotAbstractProxy.sol":927:965  returndatacopy(0, 0, returndatasize()) */
+      returndatacopy
+        /* "contracts/NotAbstractProxy.sol":986:992  result */
+      dup1
+        /* "contracts/NotAbstractProxy.sol":1010:1011  0 */
+      0x00
+        /* "contracts/NotAbstractProxy.sol":1005:1186  case 0 {... */
+      dup2
+      eq
+      tag_21
+      jumpi
+        /* "contracts/NotAbstractProxy.sol":1328:1344  returndatasize() */
+      returndatasize
+        /* "contracts/NotAbstractProxy.sol":1325:1326  0 */
+      0x00
+        /* "contracts/NotAbstractProxy.sol":1318:1345  return(0, returndatasize()) */
+      return
+        /* "contracts/NotAbstractProxy.sol":1005:1186  case 0 {... */
+    tag_21:
+        /* "contracts/NotAbstractProxy.sol":1155:1171  returndatasize() */
+      returndatasize
+        /* "contracts/NotAbstractProxy.sol":1152:1153  0 */
+      0x00
+        /* "contracts/NotAbstractProxy.sol":1145:1172  revert(0, returndatasize()) */
+      revert
+        /* "contracts/NotAbstractProxy.sol":56:85  address public implementation */
+    tag_11:
+      0x00
+      dup1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      jump	// out
+        /* "contracts/NotAbstractProxy.sol":92:180  function setImplementation(address _imp) external {... */
+    tag_18:
+        /* "contracts/NotAbstractProxy.sol":169:173  _imp */
+      dup1
+        /* "contracts/NotAbstractProxy.sol":152:166  implementation */
+      0x00
+      dup1
+        /* "contracts/NotAbstractProxy.sol":152:173  implementation = _imp */
+      0x0100
+      exp
+      dup2
+      sload
+      dup2
+      0xffffffffffffffffffffffffffffffffffffffff
+      mul
+      not
+      and
+      swap1
+      dup4
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      mul
+      or
+      swap1
+      sstore
+      pop
+        /* "contracts/NotAbstractProxy.sol":92:180  function setImplementation(address _imp) external {... */
+      pop
+      jump	// out
+        /* "#utility.yul":7:133   */
+    tag_23:
+        /* "#utility.yul":44:51   */
+      0x00
+        /* "#utility.yul":84:126   */
+      0xffffffffffffffffffffffffffffffffffffffff
+        /* "#utility.yul":77:82   */
+      dup3
+        /* "#utility.yul":73:127   */
+      and
+        /* "#utility.yul":62:127   */
+      swap1
+      pop
+        /* "#utility.yul":7:133   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":139:235   */
+    tag_24:
+        /* "#utility.yul":176:183   */
+      0x00
+        /* "#utility.yul":205:229   */
+      tag_34
+        /* "#utility.yul":223:228   */
+      dup3
+        /* "#utility.yul":205:229   */
+      tag_23
+      jump	// in
+    tag_34:
+        /* "#utility.yul":194:229   */
+      swap1
+      pop
+        /* "#utility.yul":139:235   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":241:359   */
+    tag_25:
+        /* "#utility.yul":328:352   */
+      tag_36
+        /* "#utility.yul":346:351   */
+      dup2
+        /* "#utility.yul":328:352   */
+      tag_24
+      jump	// in
+    tag_36:
+        /* "#utility.yul":323:326   */
+      dup3
+        /* "#utility.yul":316:353   */
+      mstore
+        /* "#utility.yul":241:359   */
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":365:587   */
+    tag_13:
+        /* "#utility.yul":458:462   */
+      0x00
+        /* "#utility.yul":496:498   */
+      0x20
+        /* "#utility.yul":485:494   */
+      dup3
+        /* "#utility.yul":481:499   */
+      add
+        /* "#utility.yul":473:499   */
+      swap1
+      pop
+        /* "#utility.yul":509:580   */
+      tag_38
+        /* "#utility.yul":577:578   */
+      0x00
+        /* "#utility.yul":566:575   */
+      dup4
+        /* "#utility.yul":562:579   */
+      add
+        /* "#utility.yul":553:559   */
+      dup5
+        /* "#utility.yul":509:580   */
+      tag_25
+      jump	// in
+    tag_38:
+        /* "#utility.yul":365:587   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":674:791   */
+    tag_27:
+        /* "#utility.yul":783:784   */
+      0x00
+        /* "#utility.yul":780:781   */
+      dup1
+        /* "#utility.yul":773:785   */
+      revert
+        /* "#utility.yul":920:1042   */
+    tag_29:
+        /* "#utility.yul":993:1017   */
+      tag_43
+        /* "#utility.yul":1011:1016   */
+      dup2
+        /* "#utility.yul":993:1017   */
+      tag_24
+      jump	// in
+    tag_43:
+        /* "#utility.yul":986:991   */
+      dup2
+        /* "#utility.yul":983:1018   */
+      eq
+        /* "#utility.yul":973:1036   */
+      tag_44
+      jumpi
+        /* "#utility.yul":1032:1033   */
+      0x00
+        /* "#utility.yul":1029:1030   */
+      dup1
+        /* "#utility.yul":1022:1034   */
+      revert
+        /* "#utility.yul":973:1036   */
+    tag_44:
+        /* "#utility.yul":920:1042   */
+      pop
+      jump	// out
+        /* "#utility.yul":1048:1187   */
+    tag_30:
+        /* "#utility.yul":1094:1099   */
+      0x00
+        /* "#utility.yul":1132:1138   */
+      dup2
+        /* "#utility.yul":1119:1139   */
+      calldataload
+        /* "#utility.yul":1110:1139   */
+      swap1
+      pop
+        /* "#utility.yul":1148:1181   */
+      tag_46
+        /* "#utility.yul":1175:1180   */
+      dup2
+        /* "#utility.yul":1148:1181   */
+      tag_29
+      jump	// in
+    tag_46:
+        /* "#utility.yul":1048:1187   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":1193:1522   */
+    tag_17:
+        /* "#utility.yul":1252:1258   */
+      0x00
+        /* "#utility.yul":1301:1303   */
+      0x20
+        /* "#utility.yul":1289:1298   */
+      dup3
+        /* "#utility.yul":1280:1287   */
+      dup5
+        /* "#utility.yul":1276:1299   */
+      sub
+        /* "#utility.yul":1272:1304   */
+      slt
+        /* "#utility.yul":1269:1388   */
+      iszero
+      tag_48
+      jumpi
+        /* "#utility.yul":1307:1386   */
+      tag_49
+      tag_27
+      jump	// in
+    tag_49:
+        /* "#utility.yul":1269:1388   */
+    tag_48:
+        /* "#utility.yul":1427:1428   */
+      0x00
+        /* "#utility.yul":1452:1505   */
+      tag_50
+        /* "#utility.yul":1497:1504   */
+      dup5
+        /* "#utility.yul":1488:1494   */
+      dup3
+        /* "#utility.yul":1477:1486   */
+      dup6
+        /* "#utility.yul":1473:1495   */
+      add
+        /* "#utility.yul":1452:1505   */
+      tag_30
+      jump	// in
+    tag_50:
+        /* "#utility.yul":1442:1505   */
+      swap2
+      pop
+        /* "#utility.yul":1398:1515   */
+      pop
+        /* "#utility.yul":1193:1522   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+
+    auxdata: 0xa26469706673582212204da362a209f2401c8d843469ca3680711703446141595643b219b848595298b764736f6c634300080b0033
+}

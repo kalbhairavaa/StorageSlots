@@ -1,0 +1,384 @@
+    /* "contracts/NotAbstractProxy.sol":1455:1577  contract V1 {... */
+  mstore(0x40, 0x80)
+  callvalue
+  dup1
+  iszero
+  tag_1
+  jumpi
+  0x00
+  dup1
+  revert
+tag_1:
+  pop
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x00
+  codecopy
+  0x00
+  return
+stop
+
+sub_0: assembly {
+        /* "contracts/NotAbstractProxy.sol":1455:1577  contract V1 {... */
+      mstore(0x40, 0x80)
+      callvalue
+      dup1
+      iszero
+      tag_1
+      jumpi
+      0x00
+      dup1
+      revert
+    tag_1:
+      pop
+      jumpi(tag_2, lt(calldatasize, 0x04))
+      shr(0xe0, calldataload(0x00))
+      dup1
+      0x0c55699c
+      eq
+      tag_3
+      jumpi
+      dup1
+      0x371303c0
+      eq
+      tag_4
+      jumpi
+      dup1
+      0x5c60da1b
+      eq
+      tag_5
+      jumpi
+    tag_2:
+      0x00
+      dup1
+      revert
+        /* "contracts/NotAbstractProxy.sol":1508:1521  uint public x */
+    tag_3:
+      tag_6
+      tag_7
+      jump	// in
+    tag_6:
+      mload(0x40)
+      tag_8
+      swap2
+      swap1
+      tag_9
+      jump	// in
+    tag_8:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "contracts/NotAbstractProxy.sol":1528:1575  function inc() external {... */
+    tag_4:
+      tag_10
+      tag_11
+      jump	// in
+    tag_10:
+      stop
+        /* "contracts/NotAbstractProxy.sol":1473:1502  address public implementation */
+    tag_5:
+      tag_12
+      tag_13
+      jump	// in
+    tag_12:
+      mload(0x40)
+      tag_14
+      swap2
+      swap1
+      tag_15
+      jump	// in
+    tag_14:
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "contracts/NotAbstractProxy.sol":1508:1521  uint public x */
+    tag_7:
+      sload(0x01)
+      dup2
+      jump	// out
+        /* "contracts/NotAbstractProxy.sol":1528:1575  function inc() external {... */
+    tag_11:
+        /* "contracts/NotAbstractProxy.sol":1567:1568  1 */
+      0x01
+        /* "contracts/NotAbstractProxy.sol":1562:1563  x */
+      dup1
+      0x00
+        /* "contracts/NotAbstractProxy.sol":1562:1568  x += 1 */
+      dup3
+      dup3
+      sload
+      tag_17
+      swap2
+      swap1
+      tag_18
+      jump	// in
+    tag_17:
+      swap3
+      pop
+      pop
+      dup2
+      swap1
+      sstore
+      pop
+        /* "contracts/NotAbstractProxy.sol":1528:1575  function inc() external {... */
+      jump	// out
+        /* "contracts/NotAbstractProxy.sol":1473:1502  address public implementation */
+    tag_13:
+      0x00
+      dup1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      jump	// out
+        /* "#utility.yul":7:84   */
+    tag_19:
+        /* "#utility.yul":44:51   */
+      0x00
+        /* "#utility.yul":73:78   */
+      dup2
+        /* "#utility.yul":62:78   */
+      swap1
+      pop
+        /* "#utility.yul":7:84   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":90:208   */
+    tag_20:
+        /* "#utility.yul":177:201   */
+      tag_28
+        /* "#utility.yul":195:200   */
+      dup2
+        /* "#utility.yul":177:201   */
+      tag_19
+      jump	// in
+    tag_28:
+        /* "#utility.yul":172:175   */
+      dup3
+        /* "#utility.yul":165:202   */
+      mstore
+        /* "#utility.yul":90:208   */
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":214:436   */
+    tag_9:
+        /* "#utility.yul":307:311   */
+      0x00
+        /* "#utility.yul":345:347   */
+      0x20
+        /* "#utility.yul":334:343   */
+      dup3
+        /* "#utility.yul":330:348   */
+      add
+        /* "#utility.yul":322:348   */
+      swap1
+      pop
+        /* "#utility.yul":358:429   */
+      tag_30
+        /* "#utility.yul":426:427   */
+      0x00
+        /* "#utility.yul":415:424   */
+      dup4
+        /* "#utility.yul":411:428   */
+      add
+        /* "#utility.yul":402:408   */
+      dup5
+        /* "#utility.yul":358:429   */
+      tag_20
+      jump	// in
+    tag_30:
+        /* "#utility.yul":214:436   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":442:568   */
+    tag_21:
+        /* "#utility.yul":479:486   */
+      0x00
+        /* "#utility.yul":519:561   */
+      0xffffffffffffffffffffffffffffffffffffffff
+        /* "#utility.yul":512:517   */
+      dup3
+        /* "#utility.yul":508:562   */
+      and
+        /* "#utility.yul":497:562   */
+      swap1
+      pop
+        /* "#utility.yul":442:568   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":574:670   */
+    tag_22:
+        /* "#utility.yul":611:618   */
+      0x00
+        /* "#utility.yul":640:664   */
+      tag_33
+        /* "#utility.yul":658:663   */
+      dup3
+        /* "#utility.yul":640:664   */
+      tag_21
+      jump	// in
+    tag_33:
+        /* "#utility.yul":629:664   */
+      swap1
+      pop
+        /* "#utility.yul":574:670   */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "#utility.yul":676:794   */
+    tag_23:
+        /* "#utility.yul":763:787   */
+      tag_35
+        /* "#utility.yul":781:786   */
+      dup2
+        /* "#utility.yul":763:787   */
+      tag_22
+      jump	// in
+    tag_35:
+        /* "#utility.yul":758:761   */
+      dup3
+        /* "#utility.yul":751:788   */
+      mstore
+        /* "#utility.yul":676:794   */
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":800:1022   */
+    tag_15:
+        /* "#utility.yul":893:897   */
+      0x00
+        /* "#utility.yul":931:933   */
+      0x20
+        /* "#utility.yul":920:929   */
+      dup3
+        /* "#utility.yul":916:934   */
+      add
+        /* "#utility.yul":908:934   */
+      swap1
+      pop
+        /* "#utility.yul":944:1015   */
+      tag_37
+        /* "#utility.yul":1012:1013   */
+      0x00
+        /* "#utility.yul":1001:1010   */
+      dup4
+        /* "#utility.yul":997:1014   */
+      add
+        /* "#utility.yul":988:994   */
+      dup5
+        /* "#utility.yul":944:1015   */
+      tag_23
+      jump	// in
+    tag_37:
+        /* "#utility.yul":800:1022   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "#utility.yul":1028:1208   */
+    tag_24:
+        /* "#utility.yul":1076:1153   */
+      0x4e487b7100000000000000000000000000000000000000000000000000000000
+        /* "#utility.yul":1073:1074   */
+      0x00
+        /* "#utility.yul":1066:1154   */
+      mstore
+        /* "#utility.yul":1173:1177   */
+      0x11
+        /* "#utility.yul":1170:1171   */
+      0x04
+        /* "#utility.yul":1163:1178   */
+      mstore
+        /* "#utility.yul":1197:1201   */
+      0x24
+        /* "#utility.yul":1194:1195   */
+      0x00
+        /* "#utility.yul":1187:1202   */
+      revert
+        /* "#utility.yul":1214:1519   */
+    tag_18:
+        /* "#utility.yul":1254:1257   */
+      0x00
+        /* "#utility.yul":1273:1293   */
+      tag_40
+        /* "#utility.yul":1291:1292   */
+      dup3
+        /* "#utility.yul":1273:1293   */
+      tag_19
+      jump	// in
+    tag_40:
+        /* "#utility.yul":1268:1293   */
+      swap2
+      pop
+        /* "#utility.yul":1307:1327   */
+      tag_41
+        /* "#utility.yul":1325:1326   */
+      dup4
+        /* "#utility.yul":1307:1327   */
+      tag_19
+      jump	// in
+    tag_41:
+        /* "#utility.yul":1302:1327   */
+      swap3
+      pop
+        /* "#utility.yul":1461:1462   */
+      dup3
+        /* "#utility.yul":1393:1459   */
+      0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+        /* "#utility.yul":1389:1463   */
+      sub
+        /* "#utility.yul":1386:1387   */
+      dup3
+        /* "#utility.yul":1383:1464   */
+      gt
+        /* "#utility.yul":1380:1487   */
+      iszero
+      tag_42
+      jumpi
+        /* "#utility.yul":1467:1485   */
+      tag_43
+      tag_24
+      jump	// in
+    tag_43:
+        /* "#utility.yul":1380:1487   */
+    tag_42:
+        /* "#utility.yul":1511:1512   */
+      dup3
+        /* "#utility.yul":1508:1509   */
+      dup3
+        /* "#utility.yul":1504:1513   */
+      add
+        /* "#utility.yul":1497:1513   */
+      swap1
+      pop
+        /* "#utility.yul":1214:1519   */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+
+    auxdata: 0xa2646970667358221220a312c9dd43772041e9bed4c5febe65f0094fc4eab9afa7538699aeb73fdd6b1364736f6c634300080b0033
+}
